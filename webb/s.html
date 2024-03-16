@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ＡＮＩＭＥ語ＥＳＰꔪ intro</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/jG8S62C/favicon.png">
+    <style>
+        body {
+            background: linear-gradient(to right, #666699 0%, #003366 100%);
+            display: flex;
+        
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+        .dark-mode {
+            background: linear-gradient(to right, #00ffff 0%, #6666ff 100%);
+
+            color: #fff;
+        }
+        
+    .vid{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      background-color:rgba(0, 0, 0, 0.2); 
+      padding: 10px;
+ 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+      margin-bottom: auto;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+        button {
+ --border-radius: 15px;
+ --border-width: 4px;
+ appearance: none;
+ position: relative;
+ padding: 1em 2em;
+ border: 0;
+ background-color: #212121;
+ font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+ font-size: 10px;
+ font-weight: 500;
+ color: #fff;
+ z-index: 2;
+}
+
+button::after {
+ --m-i: linear-gradient(#000, #000);
+ --m-o: content-box, padding-box;
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ padding: var(--border-width);
+ border-radius: var(--border-radius);
+ background-image: conic-gradient(
+		#488cfb,
+		#29dbbc,
+		#ddf505,
+		#ff9f0e,
+		#e440bb,
+		#655adc,
+		#488cfb
+	);
+ -webkit-mask-image: var(--m-i), var(--m-i);
+ mask-image: var(--m-i), var(--m-i);
+ -webkit-mask-origin: var(--m-o);
+ mask-origin: var(--m-o);
+ -webkit-mask-clip: var(--m-o);
+ mask-composite: exclude;
+ -webkit-mask-composite: destination-out;
+ filter: hue-rotate(0);
+ animation: rotate-hue linear 500ms infinite;
+ animation-play-state: paused;
+}
+
+button:hover::after {
+ animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+ to {
+  filter: hue-rotate(1turn);
+ }
+}
+
+button,
+button::after {
+ box-sizing: border-box;
+}
+
+button:active {
+ --border-width: 5px;
+}
+.b{
+    display: flex;
+     justify-content: center;
+       align-items: center; 
+           
+            height: auto;
+            margin-left: 40%;
+}
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <header>
+          <nav>
+            <ul>
+              <li><a href="ind.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+    <div class="vid">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vTfPVYWKCaw?si=uUAwBMXn382wf6Dq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       </div> <div class="b"><button class="b" id="toggle" style="border-radius: 20px;"></button>
+        <script>
+            const toggleButton = document.getElementById('toggle');
+            let isDarkMode = false;
+    
+            toggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode', isDarkMode);
+
+            if (isDarkMode) {
+                toggleButton.textContent = 'Dark Mode';
+            } else {
+                toggleButton.textContent = 'Light Mode';
+            }
+        });
+           
+        </script>
+    </div>
+</body>
+</html>

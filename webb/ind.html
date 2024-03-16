@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ＡＮＩＭＥ語ＥＳＰꔪ</title>
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/jG8S62C/favicon.png">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      background-color:rgba(0, 0, 0, 0.2); 
+      padding: 10px;
+ 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+      margin-bottom: auto;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .content {
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #ff6600;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: small;
+    }
+video.desktop{
+  width: 1480px;
+  height:4000px;
+}
+video.mobile{
+  width: 60vh;
+  height:1920px;
+  
+}
+
+
+
+
+    /* Media queries for different devices */
+    @media only screen and (max-width: 600px) {
+      video.desktop {
+        display: none;
+     
+      }
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 1024px) {
+      video.desktop {
+        display: none;
+       
+      }
+    }
+
+    @media only screen and (min-width: 1025px) {
+      video.mobile {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="video-container">
+    <video class="mobile" autoplay muted loop>
+      <source src="mob.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video class="desktop" autoplay muted loop>
+      <source src="su.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="ind.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <h1>Welcome to our Website</h1>
+
+
+        <p></p>
+        <a href="s.html" class="btn">Check out our intro</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Modern Website Design. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
